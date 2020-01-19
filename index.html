@@ -29,7 +29,7 @@
                 <div class="block-list__item-buttons">
                     <button title="Edit" class="btn" @click="item.isEdit = !item.isEdit" :disabled="item.isDone"><i
                             class="fas fa-pen"></i></button>
-                    <button title="Delete" class="btn" @click="deleteItem(key)"><i
+                    <button title="Delete" class="btn btn--red" @click="deleteItem(key)"><i
                             class="fas fa-trash-alt"></i></button>
                 </div>
                 <div class="block-list__item-edit" v-if="item.isEdit">

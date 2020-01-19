@@ -24,5 +24,4 @@ var app = new Vue({
     updated: function () {
         localStorage.setItem('todoList', JSON.stringify(this.list));
     }
-
 })

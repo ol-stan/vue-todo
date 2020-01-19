@@ -204,6 +204,14 @@ h2 {
   background-color: #ecf0f1;
 }
 
+.btn--red {
+  background-color: rgba(231, 77, 60, 0.2);
+}
+
+.btn--red:hover {
+  background-color: rgba(231, 77, 60, 0.7);
+}
+
 .btn--item-add {
   margin: 0 0 0 15px;
 }

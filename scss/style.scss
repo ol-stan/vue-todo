@@ -196,6 +196,14 @@ h2 {
         background-color: #ecf0f1;
     }
 
+    &--red {
+        background-color: rgba(231, 77, 60, 0.2);
+
+        &:hover {
+            background-color: rgba(231, 77, 60, 0.7);
+        }
+    }
+
     &--item-add {
         margin: 0 0 0 $space;
     }
