@@ -99,13 +99,13 @@ h2 {
 
 .block-list {
     padding: 0;
-    margin: 0 0 $space 0;
+    margin: 0;
     list-style: none;
     border-radius: $radius;
     border: 1px solid darken($colorBorder, 10%);
 
     &__item {
-        padding: $space;
+
         border-top: 1px solid $colorBorder;
         display: flex;
         align-items: center;
@@ -113,11 +113,24 @@ h2 {
         position: relative;
         flex-wrap: wrap;
 
+        &-head {
+            display: flex;
+            padding: $space;
+        }
+
         &-edit {
             border-top: 1px dashed darken($colorBorder, 10%);
             width: 100%;
-            margin: $space (-$space) (-$space) (-$space);
             padding: $space;
+            box-sizing: border-box;
+
+            &-element {
+                margin: $space 0 0 0;
+
+                &:first-child {
+                    margin: 0;
+                }
+            }
 
         }
 
@@ -125,14 +138,14 @@ h2 {
             margin: 0;
 
             &-wrapper {
-                width: 30px;
-                display: flex;
-                align-items: center;
+                max-width: 24px;
+                min-width: 24px;
             }
         }
 
         &-data {
             flex-grow: 1;
+            word-break: break-word;
         }
 
         &:first-child {
@@ -151,6 +164,8 @@ h2 {
         &:hover &-buttons {
             transform: translateX(0);
         }
+
+
     }
 }
 
@@ -176,7 +191,7 @@ h2 {
 }
 
 .btn {
-    height: 30px;
+    height: 24px;
     padding: 0 ($space - 5);
     border-radius: $radius;
     font-size: $fontSize;
@@ -203,12 +218,37 @@ h2 {
             background-color: rgba(231, 77, 60, 0.7);
         }
     }
-
-    &--item-add {
-        margin: 0 0 0 $space;
-    }
 }
 
 .block-new {
     display: flex;
+    margin: 0 (-$space/2) $space (-$space/2);
+
+    &__element {
+        margin: 0 $space/2;
+    }
+}
+
+.category-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 (-$space/2);
+
+    &__cell {
+        width: 250px;
+        flex-grow: 1;
+        padding: 0 $space/2;
+        margin: 0 0 $space 0;
+
+        &--empty {
+            margin: 0
+        }
+    }
+
+    &__caption {
+        color: $colorBase;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 0 0 $space/2 0;
+    }
 }

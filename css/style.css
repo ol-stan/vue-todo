@@ -93,14 +93,13 @@ h2 {
 
 .block-list {
   padding: 0;
-  margin: 0 0 15px 0;
+  margin: 0;
   list-style: none;
   border-radius: 4px;
   border: 1px solid #1a252f;
 }
 
 .block-list__item {
-  padding: 15px;
   border-top: 1px solid #2c3e50;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -114,11 +113,27 @@ h2 {
       flex-wrap: wrap;
 }
 
+.block-list__item-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+}
+
 .block-list__item-edit {
   border-top: 1px dashed #1a252f;
   width: 100%;
-  margin: 15px -15px -15px -15px;
   padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.block-list__item-edit-element {
+  margin: 15px 0 0 0;
+}
+
+.block-list__item-edit-element:first-child {
+  margin: 0;
 }
 
 .block-list__item-checkbox {
@@ -126,19 +141,15 @@ h2 {
 }
 
 .block-list__item-checkbox-wrapper {
-  width: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  max-width: 24px;
+  min-width: 24px;
 }
 
 .block-list__item-data {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  word-break: break-word;
 }
 
 .block-list__item:first-child {
@@ -182,7 +193,7 @@ h2 {
 }
 
 .btn {
-  height: 30px;
+  height: 24px;
   padding: 0 10px;
   border-radius: 4px;
   font-size: 14px;
@@ -212,13 +223,43 @@ h2 {
   background-color: rgba(231, 77, 60, 0.7);
 }
 
-.btn--item-add {
-  margin: 0 0 0 15px;
-}
-
 .block-new {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0 -7.5px 15px -7.5px;
+}
+
+.block-new__element {
+  margin: 0 7.5px;
+}
+
+.category-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -7.5px;
+}
+
+.category-grid__cell {
+  width: 250px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0 7.5px;
+  margin: 0 0 15px 0;
+}
+
+.category-grid__cell--empty {
+  margin: 0;
+}
+
+.category-grid__caption {
+  color: #1abc9c;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0 0 7.5px 0;
 }
 /*# sourceMappingURL=style.css.map */
